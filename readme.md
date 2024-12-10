@@ -16,13 +16,13 @@ The libraries used include:
 
 - cuDF, a GPU-optimized replacement of pandas.
 - CuPy, a GPU-optimized replacement for SciPy and NumPy.
-- cuml, a library of general machine learning algorithms.
-- cuspatial, a GPU-optimized replacement for GeoPandas and scipy.spatial.
+- cuML, a library of general machine learning algorithms.
+- cuSpatial, a GPU-optimized replacement for GeoPandas and scipy.spatial.
 
 **Relevant files:**
 
-- circle_compress.py
-- anchors.json
+- [circle_compress.py](circle_compress.py)
+- [anchors.json](anchors.json)
 
 ### Sample 2: Hierarchical clustering
 
@@ -33,25 +33,28 @@ However, planes don't require ~100 vertices; we can get rid of any points inside
 Libraries Used:
 
 - Matplotlib
-- cuspatial
+- cuSpatial
 - Torch, torch_delaunay
 - GeoPandas
-- numpy
-- cupy
-- cuml
+- NumPy
+- CuPy
+- cuML
 
 **Relevant files:**
 
-- hierarchical2.py
-- geonames.geojson
+- [hierarchical2.py](hierarchical2.py)
+- [geonames.geojson](data/geonames.geojson)
 
 ## Sample 3: Data cleaning
 
 The final sample is an example of some work I needed to do for my Database Management Systems final project. The project required us to find a dataset and upload it to a database. For this project, I parsed data from the Census Bureau's American Community Survey for each year over the last 10 years and Citibike bikeshare trip data. Fix_demographics.py is one of several scripts I used to amalgamate the census data, which was distributed across multiple csv files. All told, the data set consisted of +230M records; by using GPU multi-processing, I was able to process all the records in about 15 seconds.
 
-**relevant files:**
+Libraries Used:
+- cuDF
 
-- fix_demographics.py
-- demo_2021_nta.csv
-- econ_2021_nta.csv
-- soc_2021_nta.csv
+**Relevant Files:**
+
+- [fix_demographics.py](fix_demographics.py)
+- [demo_2021_nta.csv](data/demo_2021_nta.csv)
+- [econ_2021_nta.csv](data/econ_2021_nta.csv)
+- [soc_2021_nta.csv](data/soc_2021_nta.csv)
